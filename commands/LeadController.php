@@ -27,7 +27,7 @@ class LeadController extends Controller
 		Console::startProgress($progress = 1, $total = self::TOTAL_COUNT);
 
 		for ($i = 1; $i <= self::TOTAL_COUNT; $i++) {
-			$form = new CreateForm(100);
+			$form = new CreateForm(rand(100, 101));
 			$form->source_id = rand(1, 3);
 			$form->name = $faker->firstName . ' ' . $faker->lastName;
 			$form->status = $faker->randomElement(['active', 'draft']);
