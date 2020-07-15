@@ -1,5 +1,5 @@
 #Instructions
-- Clone project `git clone  leads-crm`.
+- Clone project `git clone git@github.com:gogolinsky/leads.git leads-crm`.
 - Install composer packages: `composer install`.
 - Create databases: `touch databases/sqlite.db`.
 - Copy .env file: `copy .env.schema .env`.
