@@ -1,0 +1,18 @@
+GET http://127.0.0.1:8080/leads
+Authorization: Basic admin admin
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8080/leads
+Authorization: Basic admin admin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Роберт Мартин",
+  "source_id": 2,
+  "status": "draft"
+}
+
+###
