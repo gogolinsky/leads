@@ -49,4 +49,9 @@ class Lead extends ActiveRecord
 	{
 		$this->name = $name;
 	}
+
+	public function fields()
+	{
+		return ['id', 'name', 'source_id', 'status'];
+	}
 }

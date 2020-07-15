@@ -27,10 +27,10 @@ class CreateForm extends Model
 	public function rules()
 	{
 		return [
-			[['name', 'created_by', 'source_id'], 'required'],
+			[['name', 'source_id'], 'required'],
 			[['name', 'status'], 'string', 'max' => 255],
 			[['status'], 'in', 'range' => LeadHelper::getStatusKeys()],
-			[['created_by', 'source_id'], 'integer'],
+			[['source_id'], 'integer'],
 		];
 	}
 

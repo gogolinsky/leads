@@ -4,6 +4,12 @@ Accept: application/json
 
 ###
 
+GET http://127.0.0.1:8080/leads?status=active&created_by=100
+Authorization: Basic admin admin
+Accept: application/json
+
+###
+
 POST http://127.0.0.1:8080/leads
 Authorization: Basic admin admin
 Accept: application/json
