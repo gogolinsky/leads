@@ -52,6 +52,6 @@ class Lead extends ActiveRecord
 
 	public function fields()
 	{
-		return ['id', 'name', 'source_id', 'status'];
+		return ['id', 'name', 'source_id', 'status', 'created_by'];
 	}
 }
