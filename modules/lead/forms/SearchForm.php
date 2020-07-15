@@ -7,18 +7,18 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * @property int $source_id
+ * @property int $created_by
  * @property string $status
  */
 class SearchForm extends Model
 {
-	public $source_id;
+	public $created_by;
 	public $status;
 
 	public function rules()
 	{
 		return [
-			[['source_id'], 'integer'],
+			[['created_by'], 'integer'],
 			[['status'], 'string', 'max' => 255],
 		];
 	}
@@ -43,7 +43,7 @@ class SearchForm extends Model
 			return $dataProvider;
 		}
 
-		$query->andFilterWhere(['source_id' => $this->source_id]);
+		$query->andFilterWhere(['created_by' => $this->created_by]);
 		$query->andFilterWhere(['status' => $this->status]);
 
 		return $dataProvider;
